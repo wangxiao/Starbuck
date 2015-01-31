@@ -18,12 +18,14 @@ function ($scope, loginSer, storageSer, $location, $timeout) {
     $scope.workList = [];
     var dataList = [];
     loginSer.getWorkTime().then(function(data) {
-        $scope.showLoading = false;
         dataList = data;
         $scope.workList = search('phone', $scope.userData.phone);
         if (!$scope.userData.name && $scope.workList.length) {
             $scope.userData.name = $scope.workList[0].name;
         }
+        $timeout(function() {
+            $scope.showLoading = false;
+        }, 2000);
     });
     function search(itemName, value) {
         var list = [];
@@ -42,6 +44,6 @@ function ($scope, loginSer, storageSer, $location, $timeout) {
         $scope.showLoading = true;
         $timeout(function() {
             $location.path('/login');
-        }, 3000);
+        }, 2000);
     }
 }]);
