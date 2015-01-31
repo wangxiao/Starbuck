@@ -5,19 +5,23 @@
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    width: 200px;
     margin: 0px auto;
+    height: 90%;
+    min-height: 400px;
 }
 
 .sb-login, .sb-work {
-    width: 320px;
+    width: 100%;
+    padding: 0px 30px;
+    max-width: 500px;
     .logo {
         margin: 0px auto;
+        margin-bottom: 20px;
         background: url('../images/logo.gif') 50% 50% no-repeat;
         width: 100px;
         height: 100px;
         background-size: contain;
-        margin-top: 30px;
+        margin-top: 50px;
     }
     .form {
         width: 100%;
@@ -25,5 +29,16 @@ body {
             margin-top: 20px;
             width: 100px;
         }
+    }
+    .progress {
+        margin: 0 auto;
+        margin-top: 30px;
+    }
+    .logout {
+        position: absolute;
+        font-size: 14px;
+        right: 10px;
+        top: 20px;
+        color: rgb(63,81,181);
     }
 }

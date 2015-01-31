@@ -1,17 +1,28 @@
 <div class="sb-work">
     <div class="logo"></div>
     <md-content class="form md-padding" md-theme="docs-dark" layout="column" layout-sm="column">
-        <md-list>
-            <md-item ng-repeat="item in messages">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">
+                <span>Hi, {{userData.name}}</span>
+            </h1>
+            <md-button class="logout md-primary" ng-click="logout()">切换用户</md-button>
+        </md-toolbar>
+        <md-list ng-if="!showLoading">
+            <h3 ng-if="!workList.length">无工作，</h3>
+            <h3 ng-if="!workList.length">貌似您休假了？</h3>
+            <md-item ng-repeat="item in workList">
                 <md-item-content>
                     <div class="md-tile-content">
-                        <h3>{{item.what}}</h3>
-                        <h4>{{item.who}}</h4>
-                        <p>{{item.notes}}</p>
+                        <h2>{{item.date}}</h3>
+                        <h4>上班时间：{{item.startHour}}</h4>
+                        <h4>下班时间：{{item.endHour}}</p>
                     </div>
                 </md-item-content>
                 <md-divider ng-if="!$last"></md-divider>
             </md-item>
         </md-list>
+        <div ng-if="showLoading" layout="row" layout-sm="column" layout-align="space-around">
+            <md-progress-circular class="md-hue-2 progress" md-mode="indeterminate"></md-progress-circular>
+        </div>
     </md-content>
 <div>

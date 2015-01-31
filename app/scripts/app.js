@@ -11,9 +11,9 @@ $routeProvider
     })
     .when('/work', {
         templateUrl: 'views/work.html',
-        controller: 'loginCtrl'
+        controller: 'workCtrl'
     })
     .otherwise({
-        redirectTo: '/login'
+        redirectTo: '/work'
     });
 }]);
