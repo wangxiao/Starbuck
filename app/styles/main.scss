@@ -1,0 +1,29 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    width: 200px;
+    margin: 0px auto;
+}
+
+.sb-login, .sb-work {
+    width: 320px;
+    .logo {
+        margin: 0px auto;
+        background: url('../images/logo.gif') 50% 50% no-repeat;
+        width: 100px;
+        height: 100px;
+        background-size: contain;
+        margin-top: 30px;
+    }
+    .form {
+        width: 100%;
+        .login-btn {
+            margin-top: 20px;
+            width: 100px;
+        }
+    }
+}

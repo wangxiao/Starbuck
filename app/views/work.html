@@ -1,0 +1,17 @@
+<div class="sb-work">
+    <div class="logo"></div>
+    <md-content class="form md-padding" md-theme="docs-dark" layout="column" layout-sm="column">
+        <md-list>
+            <md-item ng-repeat="item in messages">
+                <md-item-content>
+                    <div class="md-tile-content">
+                        <h3>{{item.what}}</h3>
+                        <h4>{{item.who}}</h4>
+                        <p>{{item.notes}}</p>
+                    </div>
+                </md-item-content>
+                <md-divider ng-if="!$last"></md-divider>
+            </md-item>
+        </md-list>
+    </md-content>
+<div>
