@@ -14,10 +14,9 @@
                 <md-item-content>
                     <div class="md-tile-content">
                         <h2>{{item.date}}</h3>
-                        <h4>上班时间：{{item.startHour}}</h4>
-                        <h4>下班时间：{{item.endHour}}</p>
-                        <h4 ng-if="item.note">备注：</h4>
-                        <p ng-if="item.note">{{item.note}}</p>
+                        <h4 ng-if="item.startHour">上班时间：{{item.startHour}}</h4>
+                        <h4 ng-if="item.endHour">下班时间：{{item.endHour}}</p>
+                        <h4 ng-if="item.note">备注：{{item.note}}</h4>
                     </div>
                 </md-item-content>
                 <md-divider ng-if="!$last"></md-divider>
