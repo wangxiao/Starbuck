@@ -16,6 +16,8 @@
                         <h2>{{item.date}}</h3>
                         <h4>上班时间：{{item.startHour}}</h4>
                         <h4>下班时间：{{item.endHour}}</p>
+                        <h4 ng-if="item.note">备注：</h4>
+                        <p ng-if="item.note">{{item.note}}</p>
                     </div>
                 </md-item-content>
                 <md-divider ng-if="!$last"></md-divider>
